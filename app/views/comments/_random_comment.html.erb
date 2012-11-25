@@ -1,0 +1,1 @@
+<%= video.random_comment unless Comment.find(:all, :conditions => {:video_id => video.id }).empty? %>

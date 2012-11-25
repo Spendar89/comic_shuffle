@@ -1,0 +1,100 @@
+// Place all the styles related to the admin controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+table{
+    border: 2pt solid black;
+    border-radius: 8px;
+
+}
+
+td{
+    width: auto;
+    height: 40px;
+    overflow:hidden;
+    border: 2pt solid black;
+    border-right: none;
+    border-bottom: none;
+    padding: 5px;
+}
+
+td:hover{
+    box-shadow: 10px 10px 5px #888888;
+    background: #C9D5EA;
+}
+
+.thumbnail{
+    width:50px;
+    height: 50px;
+}
+
+#row_header>td{
+    border-top:none;
+}
+
+.row_number{
+    border-left:none;
+}
+
+#row_header>:first-child{
+    border-left:none;
+}
+
+#ajax_spinner{
+    margin-top: -5px;
+    margin-left: 6px;
+    width: 25px;
+    height: auto;
+}
+
+.play_preview_button{
+    width: 200px;
+    height:100px;
+    background: transparent;
+    color: transparent;
+    box-shadow: none;
+    border: none;
+    cursor: pointer;
+}
+#top{
+    width: 800px;
+}
+
+#search_form{
+    width: 300px;
+    float:left;
+}
+
+#loading_div{
+    width: 300px;
+    float:left;
+}
+
+#search_results{
+    margin-top: 50px;
+    width: 900px;
+    height: auto;
+}
+
+.add_button{
+    background: url('add_button.png');
+    color: transparent;
+    border: none;
+    background-size: 50px 50px;
+    background-repeat: no-repeat;
+    height: 50px;
+    background-position: center;
+    cursor: pointer;
+}
+
+.error{
+    color: red;
+    font-weight: bold;
+}
+
+#edit_comedian{
+    height: auto;
+    width:500px;
+    border: 2pt solid black;
+    padding: 10px;
+    border-radius: 8px;
+}

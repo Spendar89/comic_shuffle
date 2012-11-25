@@ -1,0 +1,35 @@
+<div id="show_top">
+
+  <div id = "left">
+    <div id = "comedian_name_header">
+      <%= @comedian.name %>
+    </div>
+    <div id="comedian_info_div">
+      <div id="photo_div">
+        <%= image_tag @comedian.photo, :id => "photo" %>
+      </div>
+      <div id="bio">
+        <%= @comedian.bio%>
+      </div>
+      <div id="stats">
+        <div id="stats_title"> Statistics: </div>
+        <div class="stats_row">Average Video Rating: <%= @comedian.rating %>%</div>
+        <div class="stats_row">Number of Videos: <%= @comedian.videos.all.length %></div>
+        <div class="stats_row">
+          Current Rank: <% if @comedian.rank.to_s[-1] != '1' %>
+                            <%= @comedian.rank.to_s + "th"%>
+                        <% else %>
+                          <%= @comedian.rank.to_s + "st" %>
+                        <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="right">
+    <div id="current_video_div">
+      <%= render :partial => 'videos/show', :locals => {:video => @videos.first, :videos => @videos, :comedian => @comedian} %>
+   </div>
+
+</div>
+

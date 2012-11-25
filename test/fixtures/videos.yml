@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  url: MyString
+  league: MyString
+  player1_id: 1
+  player2_id: 1
+  team1_id: 1
+  team2_id: 1
+  year: MyString
+
+two:
+  title: MyString
+  url: MyString
+  league: MyString
+  player1_id: 1
+  player2_id: 1
+  team1_id: 1
+  team2_id: 1
+  year: MyString

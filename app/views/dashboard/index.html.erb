@@ -1,0 +1,42 @@
+<div id="dash_left">
+  <div id= "dash_top_comics_div" class = "dash_rank_div">
+    <div class ="dash_comics_header">
+      Top-Rated Comics:
+    </div>
+      <div id = "dash_top_comics" class="dash_rank_items">
+        <% @top_comedians.each_with_index do |comedian, i| %>
+             <%if i < 9 %>
+
+          <div class="dash_comedian_link">
+            <%=link_to image_tag(comedian.photo, :class => "dash_comic_image"), comedians_show_path(:id => comedian), :class =>"dash_comic_link" %>
+          </div>
+
+          <% end %>
+        <% end %>
+    </div>
+  </div>
+
+  <div id= "dash_recent_comics_div" class="dash_rank_div">
+    <div class ="dash_comics_header">
+      Recently-Added Comics:
+    </div>
+      <div id = "dash_recent_comics" class="dash_rank_items">
+        <% @recent_comedians.each_with_index do |comedian, i| %>
+             <%if i < 9 %>
+
+          <div class="dash_comedian_link">
+            <%=link_to image_tag(comedian.photo, :class => "dash_comic_image"), comedians_show_path(:id => comedian), :class =>"dash_comic_link" %>
+          </div>
+
+          <% end %>
+        <% end %>
+      </div>
+  </div>
+</div>
+
+<div id="dash_right">
+  <div id="dash_random_video_div">
+    <%= render :partial => "random_video", :locals=>{:video => @random_video}%>
+  </div>
+</div>
+

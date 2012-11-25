@@ -1,0 +1,47 @@
+<div id="comedian_info">Comedian Info:</div>
+<div id = "edit_comedian">
+  <%= form_for comedian, :url => comedians_update_path(:id => comedian.id), :remote => true, :id => "edit_comedian_form" do |f| %>
+    <p><%= f.label :name %>
+    <%= f.text_field :name %></p>
+    <p><%= f.label :photo_url %>
+    <%= f.text_field :photo %></p>
+    <p><%= f.label :bio %>
+    <%= f.text_area :bio, :size =>'70x5'%></p>
+    <%= f.submit "update" %>
+  <% end %>
+</div>
+
+
+<div id = "results">
+  <p>Results:</p>
+  <% comedian.errors.full_messages.each do |error| %>
+    <%= javascript_tag "$('#results_table').hide()" %>
+    <p class = "error"> Errors:  <%= error  %></p>
+  <% end %>
+  <table id = "results_table">
+    <tr id = "row_header">
+      <td><b>number</b></td>
+      <td><b>add video</b></td>
+      <td><b>title</b></td>
+      <td><b>preview</b></td>
+      <td><b>duration</b></td>
+      <td><b>view count</b></td>
+    </tr>
+    <% $counter = 0%>
+    <% results.each do |page|%>
+      <% page.each do |result|%>
+        <% if (result.duration) < 300 && !result.noembed && comedian.videos.find_by_url(result.embed_html5).nil? && comedian.videos.find_by_title(result.title.gsub!(/#{comedian.name}|-|:|on/, '' )).nil? %>
+          <% $counter += 1%>
+    <td class="row_number"><%= $counter %></td>
+    <td><%= button_to "add_video",  videos_create_path(:title => result.title,  :url => result.player_url, :comedian_id => comedian.id, :counter => $counter), :method => 'get', :remote => true, :id => $counter, :class => "add_button" %></td>
+    <td><%= result.title %></td>
+    <td class = 'video_preview' style="width: 200px; height: 100px; padding: 4px; background: url(<%= result.thumbnails[1].url %>); background-size: 94% 90%; background-repeat: no-repeat; background-position: center;"><%= button_tag "play", :class => "play_preview_button", :value => result.embed_html5({:width => '195', :height => '100', :url_params => {:controls => "0", :showinfo => "0", :autoplay => "1"}}) %></td>
+
+    <td><%= (result.duration) %> </td>
+    <td><%= result.view_count %></td>
+    </tr>
+  <% end %>
+  <% end %>
+  <%end%>
+  </table>
+</div>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TopTen</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <script src="/jwplayer/jwplayer.js"></script>
+  <script>jwplayer.key="4i54KFXD0bf9hpGXzeqFteZuR5MyJkN09/1xxA=="</script>
+  <link href='http://fonts.googleapis.com/css?family=Ranchers' rel='stylesheet' type='text/css'>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div id="background">
+    <div id = "container">
+      <div id = "header">
+
+        <div id="user_nav">
+          <% if user_signed_in? %>
+            Signed in as <%= current_user.email %>.  Not you?
+            <%= link_to "Sign out", destroy_user_session_path, :method => :delete%>
+          <% else %>
+            <%= link_to "Sign up", new_user_registration_path %> or <%= link_to "sign in", new_user_session_path %>
+          <% end %>
+        </div>
+        <div id = "nav_links_div">
+          <%= link_to "HOME", dashboard_index_path, :id => "home_link", :class => "nav_link" %>
+          <%= link_to("ADMIN", admin_index_path, :id => "admin_link", :class => "nav_link") unless @admin.nil? %>
+
+        </div>
+      </div>
+        <span id = "flash_notices">
+          <span class="notice" style = 'color: green; font-weight: bold; font-size: 18pt'><%= notice %></span>
+          <span class="alert" style = 'color: red; font-weight: bold; font-size: 18pt'><%= alert %></span>
+        </span>
+      <div id = "content">
+        <%= yield %>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

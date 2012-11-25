@@ -1,0 +1,20 @@
+<h1>Admin Panel </h2>
+<div id = "top">
+  <div id = "search_form">
+    <%= form_tag admin_search_path, :controller => 'admin', :remote => true, :method => 'get' do |f| %>
+      <%= label_tag :keywords %>
+      <%= text_field_tag :query %>
+      <%= submit_tag "search", :id => "search"%>
+    <% end %>
+  </div>
+</div>
+
+
+<div id = "middle">
+  <div id = "loading_div" style="display:none;">
+   <%= image_tag 'ajax_spinner.gif', :width=> '50', :height => '50', :id => 'ajax_spinner'%>
+  </div>
+</div>
+
+<div id="search_results">
+</div>

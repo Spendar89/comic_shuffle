@@ -1,0 +1,172 @@
+// Place all the styles related to the dashboard controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#dash_left{
+    float:left;
+    width: 38%;
+    margin: 0px;
+    overflow:hidden;
+
+}
+
+#dash_right{
+    float:right;
+    width: 60%;
+}
+
+
+.dash_comic_image{
+    width: 100px;
+    height: 100px;
+    float: left;
+    margin: 4px;
+    border: 4pt solid lightgrey;
+    box-shadow: 3px 3px 4px 0px grey;
+}
+
+.dash_comic_image:hover{
+    box-shadow: 3px 3px 4px 0px black;
+}
+
+.dash_comedian_link{
+    text-decoration: none;
+    font-size: 20pt;
+}
+
+.dash_comedian_link>a{
+    text-decoration: none;
+    color: black;
+}
+
+.dash_comics_header{
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    background: grey;
+    color: white;
+    height: 35px;
+    padding-top: 5px;
+    box-shadow: 0px 0px 4px 0px black;
+}
+
+.dash_rank_div{
+    margin-bottom: 20px;
+    float: left;
+    width: 95%;
+    height: 400px;
+    padding: 5pt;
+    text-align: center;
+    overflow:hidden;
+}
+
+.dash_comedian_link{
+    background: black;
+}
+
+#dash_random_video_info{
+    margin-top: 10px;
+
+}
+
+#dash_now_playing_text{
+    font-size: 20pt;
+    font-weight: bold;
+    float: left;
+    width: 510px;
+    height: 30px;
+    overflow: hidden;
+    padding-top: 20px;
+}
+
+#dash_random_video_div{
+    float: right;
+}
+
+#dash_random_comedian_link{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+#dash_next_video_div{
+    float: right;
+    height: 50px;
+    padding-top: 25px;
+    width: 250px;
+    overflow: hidden;
+    background: #FE5457;
+    margin-top: 20px;
+    box-shadow: 0px 0px 4px 0px black;
+}
+
+#dash_next_video_text{
+    float: right;
+    width: 140px;
+    font-size: 25px;
+}
+
+#dash_next_video_button{
+    background: url('next_arrow.png');
+    width: 70px;
+    height: 70px;
+    background-repeat: no-repeat;
+    background-position: left;
+    color: transparent;
+    border: none;
+    background-size: 100%;
+    cursor: pointer;
+    float:right;
+    margin-top: -20px;
+}
+
+#dash_above_video{
+    float: left;
+    width: 600px;
+    height: 60px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+#dash_below_video{
+    margin-top: 70px;
+    width: 600px;
+    float: left;
+    margin-bottom: 20px;
+}
+
+#dash_comments{
+    width: 400px;
+    max-height: 300px;
+    overflow-x:hidden;
+    background: lightgrey;
+    padding: 5px;
+    box-shadow: 0px 0px 4px 0px black;
+
+}
+
+#dash_comments >p{
+    font-size: 20px;
+    font-weight: bold;
+    width: 115px;
+    height: 20px;
+    padding: 10px;
+    background: grey;
+    color: white;
+    float:left;
+    margin-top: -5px;
+    margin-left: -5px;
+}
+
+#dash_comment_item{
+    width: 350px;
+    overflow-x:hidden;
+    margin-bottom: 5px;
+    padding: 5px;
+    background: white;
+    margin-left:auto;
+    margin-right: auto;
+    font-size: 16px;
+}
+
+

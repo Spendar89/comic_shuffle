@@ -1,0 +1,47 @@
+<div id="dash_above_video">
+  <div id="dash_now_playing_text">
+    <%=link_to video.comedian.name, comedians_show_path(:id => video.comedian), :id=>'dash_random_comedian_link' %>: <%= video.title %>
+  </div>
+</div>
+
+<div id="dash_video_player"></div>
+<script type='text/javascript'>
+    jwplayer('dash_video_player').setup({
+        file: "<%= video.url %>",
+        width: '600',
+        height: '338',
+        controlbar: 'none',
+        autostart: 'true',
+        icons: 'false',
+        logo: 'false',
+        fill: 'true',
+        smoothing: 'true'
+
+    });
+</script>
+<div id="dash_below_video">
+  <div id="rating_div">
+    <%= button_to  '', ratings_create_path(:video_id => video.id, :thumbs => 1), :method => 'get', :remote => true, :id => "thumbs_up_button"%>
+    <%= button_to  '', ratings_create_path(:video_id => video.id, :thumbs => 0), :method => 'get', :remote => true, :id => "thumbs_down_button"%>
+
+    <div id = "approval_rating">
+      Approval Rating: <%= (video.ratings.average('thumbs')*100).to_i unless video.ratings.average('thumbs').nil? %>%
+    </div>
+  </div>
+
+  <div id="dash_next_video_div">
+    <%= button_to "next_video",  dashboard_shuffle_path, :remote => true, :method => :get, :id => "dash_next_video_button" %>  <div id="dash_next_video_text">Next Video</div>
+  </div>
+</div>
+
+<div id="dash_comments">
+  <p>Comments:</p>
+  <% unless Comment.find(:all, :conditions => {:video_id => video.id }).empty? %>
+    <% video.comments.all.each do |comment| %>
+      <div id="dash_comment_item">
+        <%= comment.description %>
+      </div>
+    <% end %>
+  <% end %>
+</div>
+

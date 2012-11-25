@@ -1,0 +1,242 @@
+// Place all the styles related to the comedians controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+#show_top{
+    width: 100%;
+    height: auto;
+}
+
+#right{
+    width: 65%;
+    height: auto;
+    float:right;
+    margin-right: 0px;
+    margin-top: 0px;
+    background: white;
+}
+
+#left{
+    width: 30%;
+    height: 100%;
+    height: auto;
+    float:left;
+    margin-left: 20px;
+}
+
+.play_video_button{
+    background: url('glyphicons_220_play_button.png');
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+}
+
+
+#comedian_name_header{
+    font-size: 30px;
+    height: 40px;
+    font-weight: bold;
+    width: 100%;
+    background: grey;
+    text-align: center;
+    margin-bottom: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: white;
+    margin-left: -20px;
+    box-shadow: 0px 0px 4px 0px black;
+}
+
+.play_video_button_div{
+    float: right;
+    margin-top: -6px;
+}
+
+#video_list{
+    width: 400px;
+    max-height: 180px;
+    background:lightgrey;
+    float:right;
+    margin-top: 20px;
+    overflow-y:scroll;
+    box-shadow: 0px 0px 4px 0px black;
+}
+
+.comedian_video_item{
+    width: 370px;
+    height: 20px;
+    padding: 5px;
+    overflow:hidden;
+    box-shadow: 0px 1px 2px 0px #000000;
+    position:relative;
+    font-size: 14pt;
+
+
+}
+
+.comedian_video_item:hover{
+    background: #98C5FF;
+}
+
+.video_title{
+    float: left;
+    width:270px;
+    height: 18px;
+    overflow:hidden;
+    white-space: nowrap;
+
+}
+
+
+#current_video_div{
+    height: auto;
+    width: auto;
+    margin-bottom: 20px;
+    float: right;
+}
+
+div.horizontal_scroller{
+    height: 30px;
+    width: 640px;
+    background: grey;
+    float: right;
+    margin-bottom: 20px;
+    overflow: hidden;
+    position: relative;
+    padding: 10px;
+    color: white;
+    box-shadow: 0px 0px 4px 0px black;
+}
+div.scrollingtext{
+    position:absolute;
+    white-space:nowrap;
+    font-family:'Trebuchet MS',Arial;
+    font-size:18px;
+    font-weight:bold;
+    color:#000000;
+}
+
+#video_description_title{
+    font-weight: bold;
+    font-size: 20pt;
+    position: absolute;
+    white-space: nowrap;
+}
+
+
+#rating_div{
+    color: lightgreen;
+    width: 220px;
+    height: 180px;
+    float: left;
+    font-size: 20pt;
+    margin-top: 17px;
+    font-weight: bold;
+    background:#98C5FF ;
+    box-shadow: 0px 0px 4px 0px black;
+}
+
+#thumbs_down_button{
+    background: url('thumbs_down.png');
+    width: 100px;
+    height: 100px;
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: left;
+    border: none;
+    float: left;
+    cursor: pointer;
+    margin-left: 10px;
+
+}
+
+#thumbs_up_button{
+    background: url('thumbs_up.png');
+    width: 100px;
+    height: 100px;
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: right;
+    border: none;
+    float: left;
+    cursor: pointer;
+}
+
+#approval_rating{
+    color: black;
+    font-weight: bold;
+    width: 200px;
+    height: 50px;
+    margin-left: auto;
+}
+//comedian info css:
+
+#bio{
+    width: 280px;
+    margin-top:30px;
+    padding: 10px;
+    background: lightgrey;
+    margin-left: -20px;
+    box-shadow: 0px 0px 4px 0px black;
+}
+
+#video_list_left{
+    float:right;
+}
+
+#video_player_wrapper{
+    float: right;
+}
+
+#photo{
+    width: 300px;
+    height: auto;
+    margin-left: -20px;
+    box-shadow: 0px 0px 4px 0px black;
+}
+
+#stats{
+    width: 300px;
+    margin-top: 20px;
+    margin-left: -20px;
+    height: 400px;
+}
+
+#stats_title{
+    font-weight: bold;
+    font-size: 40px;
+    height: 50px;
+    margin-bottom: 10px;
+    background: grey;
+    color: white;
+    padding-left: 8px;
+    box-shadow: 0px 0px 4px 0px black;
+}
+
+.stats_row{
+    width: 265px;
+    height: 30px;
+    margin-bottom: 2px;
+    font-size: 20px;
+    background:lightgrey;
+    padding-left: 8px;
+    box-shadow: 0px 0px 4px 0px black;
+}
+
+#below_video{
+    width: 100%;
+    height: 200px;
+    float: right;
+}
+
+#comedian_search{
+    font-size: 24pt;
+    width: 400px;
+    height: 60px;
+    float: right;
+    margin-top: -100px;
+    color: grey;
+    text-align: center;
+}
+

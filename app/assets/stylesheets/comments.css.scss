@@ -1,0 +1,71 @@
+// Place all the styles related to the comments controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#comments{
+    float: left;
+    margin-top: 20px;
+    width: 320px;
+    height: 200px;
+
+}
+
+#comment_box{
+    font-size: 14pt;
+    font-weight: bold;
+    max-height: 100px;
+    max-width: 280px;
+    background:lightgrey;
+    float: left;
+    border: none;
+    box-shadow: 0px 0px 4px 0px black;
+
+
+}
+
+#comment_title{
+    width: 300px;
+    font-size: 24pt;
+    font-weight: bold;
+    margin-bottom: 10px;
+
+}
+
+#add_comment_button{
+    border: none;
+    color: transparent;
+    background: url('add_comment_icon.png');
+    width: 45px;
+    height: 45px;
+    zoom: 60%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-right: 200px;
+}
+
+#random_comment_box{
+    height: auto;
+    width: 240px;
+    float: left;
+    margin-top: 30px;
+    overflow: hidden;
+    margin-left: 20px;
+}
+
+#random_comment_text{
+    font-size: 24pt;
+}
+
+#check_mark{
+    height: 40px;
+    width: 40px;
+    margin-top: 10px;
+    margin-right: 200px;
+    display: none;
+}
+
+#hidden_refresh_comment_button{
+    position: absolute;
+    left: -4000px;
+}
