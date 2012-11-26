@@ -1,1 +1,15 @@
 $('#dash_random_video_div').html("<%= j(render :partial => 'random_video', :locals=>{:video => @random_video})%>")
+
+$('#dash_video_player_wrapper').css('right', '-1000px')
+$('#dash_above_video').css('right', '-1000px')
+$('#dash_video_player_wrapper').animate({
+    right: '+=900',
+  }, 600, function() {
+});
+
+$('#dash_above_video').animate({
+    opacity: 1,
+    right: '+=900',
+  }, 600, function() {
+});
+

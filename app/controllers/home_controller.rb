@@ -7,6 +7,8 @@ class HomeController < ApplicationController
       else
         redirect_to :controller => 'dashboard', :action => 'index'
       end
+    else
+      redirect_to :controller => 'dashboard', :action => 'index'
     end
   end
 

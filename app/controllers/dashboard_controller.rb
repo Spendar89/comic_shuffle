@@ -1,6 +1,4 @@
 class DashboardController < ApplicationController
-  before_filter :authenticate_user!
-
   def index
     @top_comedians = Comedian.top_rated
     @recent_comedians = Comedian.recently_added

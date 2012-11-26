@@ -13,6 +13,8 @@
 #dash_right{
     float:left;
     width: 70%;
+    height: 900px;
+    overflow: hidden;
 }
 
 .dash_rank_items{
@@ -94,10 +96,12 @@
     font-family: 'Fugaz One', cursive;
    -webkit-text-stroke: 1px black;
     color: black;
+    position: relative;
 }
 
 #dash_video_player_wrapper{
     float:right;
+    position: relative;
 }
 
 #dash_random_video_div{
@@ -116,11 +120,11 @@
 }
 
 #dash_next_video_div{
-    float: left;
+    float: right;
     height: 50px;
     width: 250px;
     margin-top: 20px;
-    margin-left: 20px;
+    margin-right: -80px;
 }
 
 
@@ -150,6 +154,8 @@
     max-height: 140px;
     overflow: hidden;
     margin-bottom: 10px;
+    margin-left: 4px;
+    position: relative;
 }
 
 #dash_below_video{
