@@ -31,6 +31,22 @@
 
   <div id="dash_next_video_div">
       <%= button_to "Shuffle",  dashboard_shuffle_path, :remote => true, :method => :get, :id => "dash_next_video_button" %>
+      <div id = "dash_more_from_div">
+        <div id= "dash_more_from_header">
+          More from <%= video.comedian.name%>:
+        </div>
+          <div id="dash_more_from_videos">
+            <% video.comedian.videos.all.each_with_index do |video, i|%>
+              <% if i < 3 %>
+                <div class= "dash_more_from_row">
+                  <%=link_to video.title, comedians_show_path(:id => video.comedian.id, :video_id => video.id) %>
+                </div>
+              <% end %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+
 
   </div>
 </div>
