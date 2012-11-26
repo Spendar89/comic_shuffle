@@ -6,3 +6,9 @@ $(document).ready ->
         $('.alert, .notice').delay(1000).fadeOut('slow')
         $('#debug_hide').on 'click', ->
             $('#debug').toggle()
+
+$(document).on 'ready', ->
+    $('.comments_header').on 'click', ->
+        if $(@).html() == "View Comments" then $(@).html('Hide Comments') else $(@).html('View Comments')
+        $('.dash_comments_div').toggle()
+

@@ -11,7 +11,22 @@
  *= require_self
  *= require_tree .
  */
+#logo h1{
+    margin-bottom: 0px;
+    font-size: 70px;
+    font-family: 'Fugaz One', cursive;
+   -webkit-text-stroke: 1px grey;
+    color: #FE5457;
 
+}
+
+
+#logo p{
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 0px;
+    margin-left: 5px;
+}
 
 *{
     font-family: sans-serif;
@@ -32,6 +47,7 @@
     width: 100%;
     min-height: 1200px;
     padding: 3px 0px 10px 0px;
+    background: white;
 }
 
 #container{
@@ -48,12 +64,12 @@
     height: 10px;
     padding-top: 5px;
     padding-bottom: 10px;
-    box-shadow: 0px 2px 3px 0px #000000;
     background-color: rgba(1, 1, 1, 0.8);
     color: rgba(1, 1, 1, 0.8);
     margin-bottom: 30px;
 
 }
+
 
 #user_nav{
     float: right;

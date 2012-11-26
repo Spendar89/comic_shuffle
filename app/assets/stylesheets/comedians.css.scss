@@ -45,7 +45,7 @@
     padding-bottom: 5px;
     color: white;
     margin-left: -20px;
-    box-shadow: 0px 0px 4px 0px black;
+
 }
 
 .play_video_button_div{
@@ -60,7 +60,6 @@
     float:right;
     margin-top: 20px;
     overflow-y:scroll;
-    box-shadow: 0px 0px 4px 0px black;
 }
 
 .comedian_video_item{
@@ -106,7 +105,7 @@ div.horizontal_scroller{
     position: relative;
     padding: 10px;
     color: white;
-    box-shadow: 0px 0px 4px 0px black;
+
 }
 div.scrollingtext{
     position:absolute;
@@ -126,15 +125,11 @@ div.scrollingtext{
 
 
 #rating_div{
-    color: lightgreen;
     width: 220px;
     height: 180px;
     float: left;
-    font-size: 20pt;
     margin-top: 17px;
-    font-weight: bold;
-    background:#98C5FF ;
-    box-shadow: 0px 0px 4px 0px black;
+
 }
 
 #thumbs_down_button{
@@ -165,10 +160,14 @@ div.scrollingtext{
 
 #approval_rating{
     color: black;
-    font-weight: bold;
     width: 200px;
     height: 50px;
     margin-left: auto;
+    font-weight: bold;
+    font-family: 'Fugaz One', cursive;
+   -webkit-text-stroke: 1pt black;
+    color: black ;
+    font-size: 22pt;
 }
 //comedian info css:
 
@@ -178,7 +177,8 @@ div.scrollingtext{
     padding: 10px;
     background: lightgrey;
     margin-left: -20px;
-    box-shadow: 0px 0px 4px 0px black;
+
+
 }
 
 #video_list_left{
@@ -193,7 +193,7 @@ div.scrollingtext{
     width: 300px;
     height: auto;
     margin-left: -20px;
-    box-shadow: 0px 0px 4px 0px black;
+
 }
 
 #stats{
@@ -211,17 +211,18 @@ div.scrollingtext{
     background: grey;
     color: white;
     padding-left: 8px;
-    box-shadow: 0px 0px 4px 0px black;
+
 }
 
 .stats_row{
     width: 265px;
     height: 30px;
-    margin-bottom: 2px;
+    margin-bottom: 10px;
     font-size: 20px;
     background:lightgrey;
     padding-left: 8px;
-    box-shadow: 0px 0px 4px 0px black;
+    box-shadow: 0px 1px 3px 0px black;
+
 }
 
 #below_video{

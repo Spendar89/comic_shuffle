@@ -4,7 +4,7 @@ class CommentsController < ApplicationController
   def create
     @video = Video.find(params[:video_id])
     @comment = @video.comments.new(params[:comment])
-    @comment.user_id = current_user
+    @comment.user_id = current_user.id
     if @comment.save
       respond_to do |format|
         format.js {render 'create.js.coffee.erb'}

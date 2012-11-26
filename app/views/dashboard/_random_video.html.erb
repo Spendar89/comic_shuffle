@@ -1,6 +1,6 @@
 <div id="dash_above_video">
   <div id="dash_now_playing_text">
-    <%=link_to video.comedian.name, comedians_show_path(:id => video.comedian), :id=>'dash_random_comedian_link' %>: <%= video.title %>
+    <%=link_to video.comedian.name + ":", comedians_show_path(:id => video.comedian), :id=>'dash_random_comedian_link'%> <span id = "dash_video_title" ><%= video.title%></span>
   </div>
 </div>
 
@@ -8,8 +8,8 @@
 <script type='text/javascript'>
     jwplayer('dash_video_player').setup({
         file: "<%= video.url %>",
-        width: '600',
-        height: '338',
+        width: '700',
+        height: '393',
         controlbar: 'none',
         autostart: 'true',
         icons: 'false',
@@ -30,18 +30,23 @@
   </div>
 
   <div id="dash_next_video_div">
-    <%= button_to "next_video",  dashboard_shuffle_path, :remote => true, :method => :get, :id => "dash_next_video_button" %>  <div id="dash_next_video_text">Next Video</div>
+      <%= button_to "Shuffle",  dashboard_shuffle_path, :remote => true, :method => :get, :id => "dash_next_video_button" %>
+
   </div>
 </div>
 
 <div id="dash_comments">
-  <p>Comments:</p>
+  <div class="comments_header_div"><%=video.comments.all.length%> Comments:</div>
+  <div class="dash_comments_div">
   <% unless Comment.find(:all, :conditions => {:video_id => video.id }).empty? %>
     <% video.comments.all.each do |comment| %>
       <div id="dash_comment_item">
-        <%= comment.description %>
+        <div id="dash_comment_name"><%= comment.user.name %> said: </div>
+        <div id="dash_comment_description"><%= comment.description %></div>
+        <div id= "dash_comment_date">Posted <%= comment.created_at.strftime("%b %d, %Y")%></div>
       </div>
     <% end %>
   <% end %>
+  </div>
 </div>
 

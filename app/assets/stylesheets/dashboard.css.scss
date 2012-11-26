@@ -4,25 +4,38 @@
 
 #dash_left{
     float:left;
-    width: 38%;
-    margin: 0px;
+    width: 28%;
+    margin-right: 10px;
     overflow:hidden;
 
 }
 
 #dash_right{
-    float:right;
-    width: 60%;
+    float:left;
+    width: 70%;
+}
+
+.dash_rank_items{
+    margin-left: -4px;
 }
 
 
-.dash_comic_image{
-    width: 100px;
-    height: 100px;
+.dash_rank_div{
+    margin-bottom: 10px;
     float: left;
-    margin: 4px;
-    border: 4pt solid lightgrey;
-    box-shadow: 3px 3px 4px 0px grey;
+    width: 92%;
+    height: 420px;
+    padding: 5pt;
+    overflow:hidden;
+}
+
+
+
+.dash_comic_image{
+    width: 120px;
+    height: auto;
+    float: left;
+
 }
 
 .dash_comic_image:hover{
@@ -30,8 +43,15 @@
 }
 
 .dash_comedian_link{
+    width: 120px;
+    height: 67px;
+    overflow: hidden;
     text-decoration: none;
     font-size: 20pt;
+    float: left;
+    margin: 4px;
+    border-radius: 4px;
+
 }
 
 .dash_comedian_link>a{
@@ -39,44 +59,45 @@
     color: black;
 }
 
+
+
 .dash_comics_header{
-    font-size: 25px;
+    width: 100%;
+    font-size: 28px;
     font-weight: bold;
-    margin-bottom: 10px;
-    background: grey;
-    color: white;
+    font-family: 'Fugaz One', cursive;
+   -webkit-text-stroke: 1px black;
+    color: black;
+    margin-bottom: 15px;
+    background: white;
     height: 35px;
     padding-top: 5px;
-    box-shadow: 0px 0px 4px 0px black;
-}
-
-.dash_rank_div{
-    margin-bottom: 20px;
     float: left;
-    width: 95%;
-    height: 400px;
-    padding: 5pt;
-    text-align: center;
-    overflow:hidden;
 }
 
-.dash_comedian_link{
-    background: black;
+#dash_recent_comics_header{
+    font-size: 28px;
 }
+
 
 #dash_random_video_info{
     margin-top: 10px;
-
 }
 
 #dash_now_playing_text{
-    font-size: 20pt;
+    font-size: 30pt;
     font-weight: bold;
     float: left;
-    width: 510px;
-    height: 30px;
-    overflow: hidden;
-    padding-top: 20px;
+    width: 100%;
+    padding-top: 3px;
+    margin-top: 7px;
+    font-family: 'Fugaz One', cursive;
+   -webkit-text-stroke: 1px black;
+    color: black;
+}
+
+#dash_video_player_wrapper{
+    float:right;
 }
 
 #dash_random_video_div{
@@ -85,51 +106,53 @@
 
 #dash_random_comedian_link{
     text-decoration: none;
-    color: black;
-    font-weight: bold;
+    font-family: 'Fugaz One', cursive;
+   -webkit-text-stroke: 1px black;
+    color: #63B2FD;
+}
+
+#dash_random_comedian_link:hover{
+    color: #B3D5FF;
 }
 
 #dash_next_video_div{
-    float: right;
+    float: left;
     height: 50px;
-    padding-top: 25px;
     width: 250px;
-    overflow: hidden;
-    background: #FE5457;
     margin-top: 20px;
-    box-shadow: 0px 0px 4px 0px black;
+    margin-left: 20px;
 }
 
-#dash_next_video_text{
-    float: right;
-    width: 140px;
-    font-size: 25px;
-}
 
 #dash_next_video_button{
-    background: url('next_arrow.png');
-    width: 70px;
-    height: 70px;
-    background-repeat: no-repeat;
-    background-position: left;
-    color: transparent;
+    width: 100%;
+    height: 100%;
     border: none;
-    background-size: 100%;
     cursor: pointer;
-    float:right;
-    margin-top: -20px;
+    float: left;
+    font-size: 35px;
+    font-family: 'Fugaz One', cursive;
+   -webkit-text-stroke: 1px black;
+    color: black;
+    background: #FE5457;
+    border-radius: 5px;
+    box-shadow: 1px 2px 3px 2px black;
+}
+
+#dash_next_video_button:active{
+    background: #991014;
+    box-shadow: 1px 2px 3px 2px white;
 }
 
 #dash_above_video{
     float: left;
-    width: 600px;
-    height: 60px;
+    width: 100%;
+    max-height: 140px;
     overflow: hidden;
     margin-bottom: 10px;
 }
 
 #dash_below_video{
-    margin-top: 70px;
     width: 600px;
     float: left;
     margin-bottom: 20px;
@@ -137,36 +160,62 @@
 
 #dash_comments{
     width: 400px;
-    max-height: 300px;
     overflow-x:hidden;
-    background: lightgrey;
-    padding: 5px;
-    box-shadow: 0px 0px 4px 0px black;
+}
+
+.comments_header_div{
+    font-size: 40px;
+    font-weight: bold;
+    width: 300px;
+    padding: 14px;
+    float:left;
+    margin-bottom: 5px;
+    font-family: 'Fugaz One', cursive;
+   -webkit-text-stroke: 1px black;
+    color: black;
+
 
 }
 
-#dash_comments >p{
-    font-size: 20px;
-    font-weight: bold;
-    width: 115px;
-    height: 20px;
-    padding: 10px;
-    background: grey;
-    color: white;
-    float:left;
-    margin-top: -5px;
-    margin-left: -5px;
+.dash_comments_div{
+    float: left;
+    margin-left: 20px;
+    height: 200px;
+    overflow: auto;
 }
 
 #dash_comment_item{
-    width: 350px;
+    width: 100%;
     overflow-x:hidden;
-    margin-bottom: 5px;
-    padding: 5px;
     background: white;
-    margin-left:auto;
-    margin-right: auto;
+    margin-bottom: 10px;
+}
+
+#dash_comment_description{
     font-size: 16px;
+    float: left;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+#dash_comment_name{
+    font-size: 22px;
+    float: left;
+    width:100%;
+    font-weight: bold;
+}
+
+#dash_comment_date{
+    float: left;
+    font-size: 10pt;
+    width: 100%;
+}
+
+#dash_video_title{
+    font-size: 20pt;
+    font-family: 'Fugaz One', cursive;
+   -webkit-text-stroke: 1px black;
+    color: #63B2FD;
 }
 
 
