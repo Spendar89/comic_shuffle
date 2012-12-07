@@ -4,6 +4,7 @@
       Top-Rated:
     </div>
       <div id = "dash_top_comics" class="dash_rank_items">
+	<% if !@top_comedians.nil? %>
         <% @top_comedians.each_with_index do |comedian, i| %>
              <%if i < 10 %>
 
@@ -13,6 +14,7 @@
 
           <% end %>
         <% end %>
+<%end%>
       </div>
   </div>
 
@@ -21,6 +23,7 @@
       Recently-Added:
     </div>
       <div id = "dash_recent_comics" class="dash_rank_items">
+	<% if !@recent_comedians.nil? %>
         <% @recent_comedians.each_with_index do |comedian, i| %>
              <%if i < 10 %>
 
@@ -30,13 +33,14 @@
 
           <% end %>
         <% end %>
+	<%end%>
       </div>
   </div>
 </div>
 
 <div id="dash_right">
   <div id="dash_random_video_div">
-    <%= render :partial => "random_video", :locals=>{:video => @random_video}%>
+    <%= render :partial => "random_video", :locals=>{:video => @random_video} unless @random_video.nil?%> 
   </div>
 </div>
 
